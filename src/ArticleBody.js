@@ -5,14 +5,15 @@ import ArticleText from './ArticleText'
 import ArticleLinks from './ArticleLinks'
 import Aside from './Aside'
 import OtherArticles from './OtherArticles'
+import ArticleTitle from './ArticleTitle'
 
 class ArticleBody extends Component {
   render() {
     return (
       <main className="expanded row">
           <div className="large-8 medium-12 columns article">
-            <h2 className="article-title">Gold Madness - Fact or Fiction?</h2>
-            
+            <ArticleTitle />
+
             <AuthorInfo />
 
             <ArticleText />
@@ -25,7 +26,7 @@ class ArticleBody extends Component {
 
           <OtherArticles />
 
-        </main>
+      </main>
     )
   }
 }
