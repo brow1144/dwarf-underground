@@ -6,6 +6,10 @@ form {
     font-family: 'Spectral', serif;
 }
 
+.expanded.button {
+    background: #E9CF55;
+}
+
 li {
     height: 2rem;
     border: 1px solid #ddd;

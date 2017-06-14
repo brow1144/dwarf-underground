@@ -1,3 +1,10 @@
+/*
+    TODO: Make Time Stamps Be the time and not switch all
+    TODO: Add some style to the list 
+    TODO: 
+*/
+
+
 import React, { Component } from 'react';
 import './CommentForm.css'
 
@@ -33,7 +40,7 @@ class CommentForm extends Component {
                     {this.state.comments.map(this.renderComments)}
                 </ul>
                 <input type="text" ref={input => this.commentInput = input} />
-                <button className="expanded success button" type="submit">Submit Comment</button>
+                <button className="expanded button" type="submit">Submit Comment</button>
             </form>    
         )
     }
