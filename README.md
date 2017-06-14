@@ -11,15 +11,15 @@ To practice making components, we've provided all the markup and styling for a s
 * run your React version by typing `yarn start` and navigating to `localhost:3000`
 * check to make sure that your React version looks the same as the original
 
-### Basic Requirements
+### Basic Requirements (Completed!)
 
 * Split the page into at least 6 total components
 
-### Bonus Credit
+### Bonus Credit (Completed!)
 
 * Split the page into at least 10 total components, including components *in* components
 
-### Super Bonus Credit
+### Super Bonus Credit (Completed!)
 
 * Render the four article links at the bottom of the screen using `map` and passing in the props they need
 
