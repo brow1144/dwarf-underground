@@ -18,11 +18,11 @@ class ArticleLinks extends Component {
       ev.preventDefault()
       if (this.state.showComments) {
         this.setState({
-          showComponent: false,
+          showComments: false,
         });
       } else {
         this.setState({
-          showComponent: true,
+          showComments: true,
         });
       }
     }
@@ -38,7 +38,7 @@ class ArticleLinks extends Component {
                 <i className="fa fa-share"></i>
                 <span className="article-link-text">Share Post</span>
               </a>
-              {this.state.showComponent ?
+              {this.state.showComments ?
                 <CommentForm /> :
                 null
               }
