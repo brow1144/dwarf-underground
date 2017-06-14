@@ -19,11 +19,11 @@ class ArticleBody extends Component {
             <ArticleText />
 
             <ArticleLinks />
+
+            
             
           </div>
           
-
-
           <Aside />
 
           <OtherArticles />
