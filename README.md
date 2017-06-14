@@ -28,6 +28,6 @@ To practice making components, we've provided all the markup and styling for a s
 * Make a component that contains a text field for leaving a comment
 * Have the text field appear only when the 'comments' link at the bottom of the article is clicked
 
-### Super Mega Bonus Credit Hyper Fighting
+### Super Mega Bonus Credit Hyper Fighting (Complete!)
 
 * Actually display comments that are entered and submitted
