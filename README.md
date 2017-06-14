@@ -23,7 +23,7 @@ To practice making components, we've provided all the markup and styling for a s
 
 * Render the four article links at the bottom of the screen using `map` and passing in the props they need
 
-### Super Mega Bonus Credit
+### Super Mega Bonus Credit (Completed!)
 
 * Make a component that contains a text field for leaving a comment
 * Have the text field appear only when the 'comments' link at the bottom of the article is clicked
