@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './CommentForm.css'
+import './Comment.css'
 
 class CommentForm extends Component {
     
@@ -7,44 +8,56 @@ class CommentForm extends Component {
       super()
       
       this.state = {
+        comment: '',
         comments: [],
       }
 
-      this.onSubmitFunction = this.onSubmitFunction.bind(this)
+      //this.onSubmitFunction = this.onSubmitFunction.bind(this)
+      this.updateComment = this.updateComment.bind(this)
+      this.addComment = this.addComment.bind(this)
     }
 
-    onSubmitFunction(ev) {
-        ev.preventDefault()
-        const comments = [...this.state.comments]
-        comments.push(this.commentInput.value)
-        this.setState({ comments })
-        ev.currentTarget.reset()
+    updateComment(ev) {
+        this.setState({
+            comment: ev.target.value
+        })
     }
 
-    renderComments(comment, i) {
-        return ( 
-            <li key={i}>
-                {comment}
-                <span>
-                    {new Date().toJSON().slice(0,10).replace(/-/g,'/')}
-                </span>
-            </li>
-
-
-        )
+    addComment(ev) {
+        const comment = {
+            timestamp: new Date(),
+            text: this.state.comment
+        }
+        const state = {...this.state}
+        state.comments.push(comment)
+        state.comment = ''
+        this.setState(state)
     }
-    
+
     render() {
         return (
-            <form className="commentForm" onSubmit={this.onSubmitFunction.bind(this)}>
-                <ul className="no-bullet">
-                    {this.state.comments.map(this.renderComments)}
-                </ul>
-                <input type="text" ref={input => this.commentInput = input} />
-                <button className="expanded button" type="submit">Submit Comment</button>
-            </form>    
+            <div className="comments">
+                <textarea 
+                    value={this.state.comment} 
+                    onChange={this.updateComment} 
+                    placeholder="Enter Comment">
+                </textarea>
+                <button 
+                    onClick={this.addComment} 
+                    className="expanded button">Submit Comment
+                </button>
+                {this.state.comments.map((comment, i) => <Comment comment={comment} key={i}/>)}
+            </div>
         )
     }
+}
+
+function Comment (props) {
+    return (
+        <div className="comment">
+            <div>{props.comment.text}</div>
+        </div>
+    )
 }
 
 export default CommentForm
