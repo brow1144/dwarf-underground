@@ -16,15 +16,7 @@ class ArticleLinks extends Component {
 
     onClickFunction(ev) {
       ev.preventDefault()
-      if (this.state.showComments) {
-        this.setState({
-          showComments: false,
-        });
-      } else {
-        this.setState({
-          showComments: true,
-        });
-      }
+      this.setState({ showComments: !this.state.showComments })
     }
     
     render() {
